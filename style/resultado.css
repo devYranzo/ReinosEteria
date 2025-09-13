@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'ObraLetra';
+    src: url("Font/ObraLetra/KCObraLetraBold.ttf");
+    font-weight: bold;
+}
+
+body {
+    background-color: black;
+    background-image: url(../img/background.webp);
+    background-repeat: no-repeat;
+}
+
+.cerrar {
+    float: right;
+    text-decoration: none;
+    font-size: x-large;
+    color: red;
+}
+
+.info1 {
+    width:1000px;
+    height:640px;
+    background-image: url(../img/old-paper.webp);
+    top: 170px;
+    left: 460px;
+    padding:40px 70px;
+    box-sizing:border-box;
+    font-family:'ObraLetra';
+    position:relative;
+}
+
+.tit1 {
+    font-family:'ObraLetra';
+}
+
+.tit1_1 {
+    color: #78788c;
+    font-family:'Montserrat',sans-serif;
+    border-bottom: 3px solid #78788c;
+    width: 500px;
+}
+
+
+.izquierda {
+    float: left;
+    margin-top: 15px;
+}
+
+.derecha {
+    float: right;
+}
+
+hr {
+    height: 2px;
+    background-color: #444444;
+    border: none;
+}
+
+.atributos {
+    text-align: left;
+    width: 350px
+}
+
+.argazkia {
+    margin-right: 30px;
+    width: 235px;
+    aspect-ratio: 1/1;
+}
+
+img {
+    width: 210px;
+}
+
+.respuesta {
+    padding: 0 10px 5px 0;
+    margin: 0;
+}
+
+.historia {
+    width: 350px;
+    height: 100px;
+    font-family: 'ObraLetra';
+    font-weight: bold;
+    border: 0;
+    background: none;
+    outline: none;
+    padding: 8px;
+    resize: none;
+    overflow-wrap: break-word;
+}
+

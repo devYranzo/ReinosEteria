@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'ObraLetra';
+    src: url("Font/ObraLetra/KCObraLetraBold.ttf");
+    font-weight: bold;
+}
+
+body {
+    background-color: black;
+    background-image: url(../img/background.webp);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.InfoJuego {
+    width:1000px;
+    height:640px;
+    background-image: url(../img/old-paper.webp);
+    top: 170px;
+    left: 460px;
+    padding:20px 90px;
+    box-sizing:border-box;
+    position:relative;
+}
+
+.tit1 {
+    color: red;
+    margin-top: 50px;
+    font-family: 'ObraLetra';
+    font-size: xxx-large;
+}
+
+.historia {
+    width: 100%;
+    height: 200px;
+    margin-top: 0;
+    font-size: 21px;
+    font-family: 'ObraLetra';
+    font-weight: bold;
+}
+
+p::first-letter{
+    font-size: 180%;
+}
+
+.boton {
+    float: right;
+    width: 100px;
+    height: 40px;
+    margin-right: 40px;
+    font-size: larger;
+    outline: none;
+    background: none;
+    border: none;
+}
+
+a:hover {
+    color: #d50000;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+    font-family: 'ObraLetra';
+}

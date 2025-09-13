@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reinos de Éteria</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="stylesheet" media="all" href="style/personajes.css"/>
+</head>
+<body>
+<form class="form" action="resultado.php" method="post">
+    <table>
+        <tr>
+            <td><h2 class="titulo">CREADOR DE PERSONAJES:</h2></td>
+            <td><a href="inicio.html" class="cerrar"><h2>X</h2></a></td>
+        </tr>
+    </table>
+  <div class="izquierda">
+    <p><input type="text" placeholder="Nombre de tu heroe" class="izena" name="name" required></p>
+    <p>
+      <select name="profesion" required>
+        <option selected value="Desempleado">--Elije tu profesión--</option>
+        <option value="Cazador">Cazador</option>
+        <option value="Guerrero">Guerrero</option>
+        <option value="Hechicero">Hechicero</option>
+        <option value="Campesino">Campesino</option>
+        <option value="Clerigo">Clerigo</option>
+      </select>
+    </p>
+    <p type="Habilidades (Max 3):" id="form1" class="check">
+        <input type="checkbox" name="habilidades[]" value="Mañoso" onchange="validacion('form1', this)"> .......... Mañoso<br>
+        <input type="checkbox" name="habilidades[]" value="Matón" onchange="validacion('form1', this)"> .......... Matón<br>
+        <input type="checkbox" name="habilidades[]" value="Velóz" onchange="validacion('form1', this)"> .......... Velóz<br>
+        <input type="checkbox" name="habilidades[]" value="Genio" onchange="validacion('form1', this)"> .......... Genio<br>
+        <input type="checkbox" name="habilidades[]" value="Carismatico" onchange="validacion('form1', this)"> .......... Carismatico<br>
+        <input type="checkbox" name="habilidades[]" value="Sigiloso" onchange="validacion('form1', this)"> .......... Sigiloso<br>
+        <input type="checkbox" name="habilidades[]" value="Percerpcionista" onchange="validacion('form1', this)"> .......... Percerpcionista<br>
+        <input type="checkbox" name="habilidades[]" value="Especialista en Armas" onchange="validacion('form1', this)"> .......... Especialista en Armas<br>
+        <input type="checkbox" name="habilidades[]" value="Arquimides" onchange="validacion('form1', this)"> .......... Arquímedes<br>
+        <input type="checkbox" name="habilidades[]" value="Negociador" onchange="validacion('form1', this)"> .......... Negociador<br>
+        <input type="checkbox" name="habilidades[]" value="Detective" onchange="validacion('form1', this)"> .......... Detective<br>
+        <input type="checkbox" name="habilidades[]" value="Sociable" onchange="validacion('form1', this)"> .......... Sociable<br>
+    </p>
+  </div>
+  <div class="derecha">
+    <p type="Atrbutos (0-10):">
+        Fuerza: <input type="number" class="atributos" max="10" min="0" name="fuerza" required><br>
+        Agilidad: <input type="number" class="atributos" max="10" min="0" name="agilidad" required><br>
+        Defensa: <input type="number" class="atributos" max="10" min="0" name="defensa" required><br>
+        Vitalidad: <input type="number" class="atributos" max="10" min="0" name="vitalidad" required>
+    </p>
+      <p type="Historia (Max 150):">
+          <textarea class="historia" placeholder="Hacia mucho tiempo un..." name="historia" onKeyUp="maximo(this,150);" onKeyDown="maximo(this,150);" onkeypress="return (event.charCode !== 60 && event.charCode !== 62)" required></textarea>
+      </p>
+
+      <br><br>
+
+      <input class="boton" type="submit" value="Crear" name="enviar" formtarget="frame">
+  </div>
+</form>
+    <script language="javascript">
+        //VALIDACION CHECKBOX
+            function validacion(formu, obj) {
+                limite=3; //limite de checks a seleccionar
+                num=0;
+                if (obj.checked) {
+                    for (i=0; ele=document.getElementById(formu).children[i]; i++)
+                        if (ele.checked) num++;
+                if (num>limite)
+                    obj.checked=false;
+                }
+            }
+        //MAX CARACTERES TEXTAREA
+            function maximo(campo,limite){
+                if(campo.value.length>=limite){
+                    campo.value=campo.value.substring(0,limite);
+                }
+            }
+    </script>
+</body>
+</html>

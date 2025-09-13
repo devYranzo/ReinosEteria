@@ -1,0 +1,168 @@
+@font-face {
+    font-family: 'ObraLetra';
+    src: url("Font/ObraLetra/KCObraLetraBold.ttf");
+    font-weight: bold;
+}
+
+body {
+    background-color: black;
+    background-image: url(../img/background.webp);
+    background-repeat: no-repeat;
+    font-family: 'ObraLetra';
+}
+.form{
+    width:1000px;
+    height:640px;
+    background-image: url(../img/old-paper.webp);
+    top: 170px;
+    left: 460px;
+    padding: 40px 90px;
+    box-sizing:border-box;
+    position:relative;
+}
+
+table{
+    width: 100%;
+}
+
+.cerrar {
+    text-decoration: none;
+    font-size: x-large;
+    color: red;
+}
+
+
+p {
+    color: black;
+}
+
+.izquierda {
+    float: left;
+}
+.izquierda input{
+    padding-bottom:10px;
+    background:none;
+    outline:none;
+    resize:none;
+    border:0;
+    font-family: 'ObraLetra';
+    font-weight: bold;
+    transition:all .3s;
+    border-bottom:2px solid #505050;
+}
+input:hover{
+    border-bottom: 2px solid red;
+}
+
+.izena {
+    width: 300px;
+    font-size: large;
+}
+
+::placeholder {
+    color: #444444;
+}
+
+select {
+    width:330px;
+    padding-bottom:10px;
+    background:none;
+    border:0;
+    outline: none;
+    font-family: 'ObraLetra';
+    font-weight: bold;
+    font-size: large;
+    transition:all .3s;
+    border-bottom:2px solid #505050;
+}
+
+select:hover{
+    border-bottom:2px solid red;
+}
+
+p.check{
+
+}
+
+.derecha {
+    float: right;
+
+}
+
+.atributos {
+    width:40px;
+    padding-bottom:10px;
+    margin-right: 250px;
+    background:none;
+    outline: none;
+    border:0;
+    font-family: 'ObraLetra';
+    font-weight: bold;
+    transition:all .3s;
+    border-bottom:2px solid #505050;
+    -moz-appearance: textfield;
+}
+
+.atributos::-webkit-inner-spin-button,
+.atributos::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+p:before{
+    content:attr(type);
+    display:block;
+    margin:20px 0 10px;
+    font-size:18px;
+    color: black;
+}
+
+.historia {
+    width: 350px;
+    height: 100px;
+    font-family: 'ObraLetra';
+    font-weight: bold;
+    border: 0;
+    border-bottom: 1px solid;
+    background: none;
+    outline: none;
+    padding: 8px;
+    margin-top: 10px;
+    resize: none;
+    overflow: hidden;
+}
+
+.boton {
+    float: right;
+    width: 100px;
+    height: 40px;
+    margin-right: 40px;
+    font-size: xx-large;
+    outline: none;
+    background: none;
+    border: none;
+    color: red;
+    font-family: 'ObraLetra';
+    font-weight: bold;
+}
+
+.boton:hover {
+     color: #d50000;
+ }
+
+input[type="checkbox"]{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    border: 1px solid;
+    border-radius: 2px;
+}
+
+input[type="checkbox"]:hover{
+    background-color: red;
+}
+
+input[type="checkbox"]:checked{
+    background-color: #b60000;
+}
